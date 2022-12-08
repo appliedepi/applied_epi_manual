@@ -1,0 +1,7 @@
+outbreak-response
+introduction
+outbreak-scenario
+setting-the-scene
+the-alert
+prepare-for-field-work
+confirm-the-diagnosis

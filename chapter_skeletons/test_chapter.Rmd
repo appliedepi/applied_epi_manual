@@ -1,0 +1,84 @@
+```{r out.width = "50%", fig.align = "center", echo=F}
+knitr::include_graphics(here::here("images", "epi_manual.png"))
+```
+
+```{r}
+
+test <- googlesheets4::read_sheet(
+   "https://docs.google.com/spreadsheets/d/1GRvHou9l29MhyMSL1Wx3AOI9lUDrBmCOTJJycxrC1pw/edit#gid=1187534738",
+   range = "test_chapter", col_types = "c") %>%
+   clean_names()
+
+#test <- import(here("translations", "data", "test.rds"))
+```
+
+# `r paste0(test[test$uid == "test_h1_outbreak", lang])`
+
+<!-- ======================================================= -->
+
+## `r paste0(test[test$uid == "test_h2_intro", lang])`
+
+`r paste0(test[test$uid == "test_tx_intro_1", lang])`
+
+`r paste0(test[test$uid == "test_tx_intro_2", lang])`
+
+`r paste0(test[test$uid == "test_tx_intro_3", lang])`
+
+**`r paste0(test[test$uid == "test_tb_steps_0", lang])`**
+
+| `r paste0(test[test$uid == "test_tb_steps_1", lang])`    | `r paste0(test[test$uid == "test_tb_steps_12", lang])` |
+|------------------------------------|------------------------------------|
+| `r paste0(test[test$uid == "test_tb_steps_2", lang])`  | `r paste0(test[test$uid == "test_tb_steps_13", lang])` |
+| `r paste0(test[test$uid == "test_tb_steps_3", lang])`  | `r paste0(test[test$uid == "test_tb_steps_14", lang])` |
+| `r paste0(test[test$uid == "test_tb_steps_4", lang])`  | `r paste0(test[test$uid == "test_tb_steps_15", lang])` |
+| `r paste0(test[test$uid == "test_tb_steps_5", lang])`  | `r paste0(test[test$uid == "test_tb_steps_16", lang])` |
+| `r paste0(test[test$uid == "test_tb_steps_6", lang])`  | `r paste0(test[test$uid == "test_tb_steps_17", lang])` |
+| `r paste0(test[test$uid == "test_tb_steps_7", lang])`  | `r paste0(test[test$uid == "test_tb_steps_18", lang])` |
+| `r paste0(test[test$uid == "test_tb_steps_8", lang])`  | `r paste0(test[test$uid == "test_tb_steps_19", lang])` |
+| `r paste0(test[test$uid == "test_tb_steps_9", lang])`  | `r paste0(test[test$uid == "test_tb_steps_20", lang])` |
+| `r paste0(test[test$uid == "test_tb_steps_10", lang])` | `r paste0(test[test$uid == "test_tb_steps_21", lang])` |
+| `r paste0(test[test$uid == "test_tb_steps_11", lang])` | `r paste0(test[test$uid == "test_tb_steps_22", lang])` |
+
+
+## `r paste0(test[test$uid == "test_h2_scenario", lang])`
+
+`r paste0(test[test$uid == "test_tx_scenario_1", lang])`
+
+### `r paste0(test[test$uid == "test_h3_scene", lang])`
+
+`r paste0(test[test$uid == "test_tx_scene", lang])`
+
+### `r paste0(test[test$uid == "test_h3_alert", lang])`
+
+`r paste0(test[test$uid == "test_tx_alert", lang])`
+
+
+
+
+## `r paste0(test[test$uid == "test_h2_prepare", lang])`
+
+`r paste0(test[test$uid == "test_tx_prepare", lang])`
+
+
+`r paste0(test[test$uid == "test_qq_prepare", lang])`
+
+*`r paste0(test[test$uid == "test_qa_prepare", lang])`*
+
+
+
+
+
+
+## `r paste0(test[test$uid == "test_h2_confirm", lang])`
+
+
+`r paste0(test[test$uid == "test_qq_diseases", lang])`
+
+*`r paste0(test[test$uid == "test_qa_diseases", lang])`*
+
+`r paste0(test[test$uid == "test_qq_measures", lang])`
+
+*`r paste0(test[test$uid == "test_qa_measures", lang])`*
+
+`r paste0(test[test$uid == "test_tb_measures", lang])`
+
