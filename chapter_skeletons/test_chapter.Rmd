@@ -1,18 +1,8 @@
+# `r paste0(test[test$uid == "test_h1_outbreak", lang])`
+
 ```{r out.width = "50%", fig.align = "center", echo=F}
 knitr::include_graphics(here::here("images", "epi_manual.png"))
 ```
-
-```{r}
-
-test <- googlesheets4::read_sheet(
-   "https://docs.google.com/spreadsheets/d/1GRvHou9l29MhyMSL1Wx3AOI9lUDrBmCOTJJycxrC1pw/edit#gid=1187534738",
-   range = "test_chapter", col_types = "c") %>%
-   clean_names()
-
-#test <- import(here("translations", "data", "test.rds"))
-```
-
-# `r paste0(test[test$uid == "test_h1_outbreak", lang])`
 
 <!-- ======================================================= -->
 

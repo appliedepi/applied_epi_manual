@@ -6,8 +6,21 @@ rm(list = ls(all = TRUE))
 #lapply(names(sessionInfo()$loadedOnly), require, character.only = TRUE)
 #invisible(lapply(paste0('package:', names(sessionInfo()$otherPkgs)), detach, character.only=TRUE, unload=TRUE, force=TRUE))
 
+
+
 # set translation language
 lang <- "en"
+
+
+
+# import translations
+test <- googlesheets4::read_sheet(
+     "https://docs.google.com/spreadsheets/d/1GRvHou9l29MhyMSL1Wx3AOI9lUDrBmCOTJJycxrC1pw/edit#gid=1187534738",
+     range = "test_chapter", col_types = "c") %>%
+     clean_names()
+#test <- import(here("translations", "data", "test.rds"))
+
+
 
 
 # to ensure that tidyverse packages prevail
